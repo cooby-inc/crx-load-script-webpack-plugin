@@ -113,7 +113,6 @@ import '@cooby/crx-load-script-webpack-plugin/lib/loadScript'
 If you haven't a background script yet, you need to add it to webpack entries and manifest.json.
 
 ```json
-// manifest.json
 "background": {
   "service_worker": "background.bundle.js"
 },
