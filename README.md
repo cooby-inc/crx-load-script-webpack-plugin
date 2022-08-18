@@ -34,14 +34,11 @@ module.exports = {
      */
     static: { watch: false },
     /**
-     * Stop injecting
-     * `hot:webpack/hot/dev-server`,
-     * `client:webpack-dev-server/client`
-     * these two modules to into the injection and background scripts.
-     * We'll import it from the content script manually.
+     * Set WebSocket url to dev-server, instead of the default `${publicPath}/ws`
      */
-    hot: false,
-    client: false,
+    client: {
+      webSocketURL: 'ws://localhost:8080/ws',
+    },
     /**
      * The host of the page of your script extension runs on.
      * You'll see `[webpack-dev-server] Invalid Host/Origin header` if this is not set.
@@ -52,12 +49,6 @@ module.exports = {
        * Write file to output folder /build, so we can execute it later.
        */
       writeToDisk: true,
-      /** 
-       * The page of your script extension run on. Set this to fix the CORS issue.
-       */
-      headers: {
-        'Access-Control-Allow-Origin': 'https://web.whatsapp.com',
-      },
     },
   },
   plugins: [
@@ -130,11 +121,5 @@ If you haven't a background script yet, you need to add it to webpack entries an
  * and for asset modules like file-loader to work.
  */
 __webpack_public_path__ = chrome.runtime.getURL('');
-
-if (module.hot) {
-  require('webpack/hot/dev-server');
-  // set the query to your dev server's location.
-  require('webpack-dev-server/client?hot=true&protocol=ws&hostname=localhost&port=8080');
-}
 ```
 
