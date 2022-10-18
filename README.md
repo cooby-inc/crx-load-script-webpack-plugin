@@ -2,6 +2,8 @@
 
 This Webpack plugin overrides the default load script mechanism of Webpack runtime. Useful for Chrome Extension developers that are trying to lazyload scripts or using HMR when working with the Webpack dev server and the manifest V3.
 
+Check out the article on how this plugin was developed: https://medium.com/coobyhq/hot-module-replacement-for-chrome-extension-1096cb480edd
+
 ## Getting Started
 
 ### Intall plugin
