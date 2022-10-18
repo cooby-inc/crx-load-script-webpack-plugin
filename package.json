@@ -2,6 +2,11 @@
   "name": "@cooby/crx-load-script-webpack-plugin",
   "version": "1.0.0",
   "description": "A webpack plugin overrides the default load script mechanism for Chrome Extension. Useful for Chrome Extension developers that are trying to lazyload scripts or using HMR when working with the Webpack dev server.",
+  "homepage": "https://github.com/cooby-inc/crx-load-script-webpack-plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cooby-inc/crx-load-script-webpack-plugin.git"
+  },
   "main": "index.js",
   "keywords": [
     "webpack",
