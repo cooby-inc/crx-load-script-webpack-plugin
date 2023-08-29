@@ -4,6 +4,10 @@ This Webpack plugin overrides the default load script mechanism of Webpack runti
 
 Check out the article on how this plugin was developed: https://medium.com/coobyhq/hot-module-replacement-for-chrome-extension-1096cb480edd
 
+## Demo
+
+Checkout the [examples](./examples/) folder for demo.
+
 ## Getting Started
 
 ### Intall plugin
@@ -57,7 +61,6 @@ module.exports = {
     /** 
      * Enable HMR related plugins. 
      */
-    new webpack.HotModuleReplacementPlugin(),
     new CrxLoadScriptWebpackPlugin(),
     new ReactRefreshWebpackPlugin({
       overlay: false,
