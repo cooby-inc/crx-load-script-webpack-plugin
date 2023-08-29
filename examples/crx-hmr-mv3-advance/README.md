@@ -1,4 +1,4 @@
-# Chrome extension HMR example
+# Chrome extension HMR advance example
 
 - Run `npm run dev` and navigate to https://web.whatsapp.com.
 - Modify the `app.js` to see the HMR.
