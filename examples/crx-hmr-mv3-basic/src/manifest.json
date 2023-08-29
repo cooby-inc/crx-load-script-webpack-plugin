@@ -1,0 +1,22 @@
+{
+  "name": "crx-hmr-mv3-basic-example",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "permissions": ["scripting"],
+  "web_accessible_resources": [
+    {
+      "resources": ["*.hot-update.json"],
+      "matches": ["https://web.whatsapp.com/*"]
+    }
+  ],
+  "host_permissions": ["https://web.whatsapp.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["./content.js"],
+      "matches": ["https://web.whatsapp.com/*"]
+    }
+  ]
+}

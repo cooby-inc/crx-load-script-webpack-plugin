@@ -125,3 +125,9 @@ If you haven't a background script yet, you need to add it to webpack entries an
 __webpack_public_path__ = chrome.runtime.getURL('');
 ```
 
+
+## Trouble shooting
+
+After modifying the manifest.json, you must click the reload button from chrome://extensions to reload it. You cannot reload the manifest.json by clicking the reload button of other reload extension extensions. For example, if you run `npm run build` and then run `npm run dev`, the manifest.json is modified by inserting the HMR related permissions. Therefore, you need to click the reload button from chrome://extensions. 
+
+For some reasons HMR may fail and Webpack will attempt to fully reload the page. For example, you modify the content.js instead of app.js's React code. However, this reloading will not bring you the latest update. You need to click the reload button from chrome://extensions, then reload the page. Alternatively, you can click the reload button of other reload extension extensions.
