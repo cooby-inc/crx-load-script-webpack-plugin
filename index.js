@@ -19,8 +19,9 @@ class CrxLoadScriptWebpackPlugin {
           .tap('CrxLoadScriptWebpackPlugin', (chunk, set) => {
             if(this.options.entry.test(chunk.name)){
               compilation.addRuntimeModule(chunk, new LoadScriptRuntimeModule());
+              return true;
             }
-            return true;
+            return undefined;
           });
       }
     );
